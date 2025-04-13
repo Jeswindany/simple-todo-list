@@ -24,6 +24,16 @@ export default function TodoItem({ todo, remove, toggleTodo }) {
       <ListItemButton role={undefined} dense>
         <ListItemIcon>
           <Checkbox
+            sx={{
+              color: "purple",
+              "&.Mui-checked": {
+                color: "purple",
+              },
+              "& .MuiSvgIcon-root": {
+                borderColor: "purple",
+                borderRadius: "4px",
+              },
+            }}
             edge="start"
             checked={todo.completed}
             tabIndex={-1}

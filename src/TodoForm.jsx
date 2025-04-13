@@ -15,9 +15,29 @@ export default function TodoForm({ addTodo }) {
   };
 
   return (
-    <ListItem>
+    <ListItem sx={{ justifyContent: "center" }}>
       <form onSubmit={handleSubmit}>
         <TextField
+          sx={{
+            mt: 1,
+            "& label.Mui-focused": {
+              color: "purple",
+            },
+            "& label.MuiInputLabel-shrink": {
+              color: "purple",
+            },
+            "& .MuiOutlinedInput-root": {
+              "& fieldset": {
+                borderColor: "purple",
+              },
+              "&:hover fieldset": {
+                borderColor: "darkviolet",
+              },
+              "&.Mui-focused fieldset": {
+                borderColor: "rebeccapurple",
+              },
+            },
+          }}
           id="outlined-basic"
           label="New Todo"
           variant="outlined"
